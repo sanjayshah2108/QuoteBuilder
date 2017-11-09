@@ -19,8 +19,6 @@ class HomescreenTableViewController: UIViewController, UITableViewDelegate, UITa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellID", for: indexPath) as UITableViewCell
         
-        
-        
         cell.textLabel?.text = NewQuoteViewController.quotesArray[indexPath.row].quoteQuote
         cell.detailTextLabel?.text =  NewQuoteViewController.quotesArray[indexPath.row].quoteAuthor
         

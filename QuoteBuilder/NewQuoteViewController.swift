@@ -18,6 +18,8 @@ class NewQuoteViewController: UIViewController {
     
     static var quotesArray = Array<Quote>()
     
+    var currQuote: Quote!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,29 +36,36 @@ class NewQuoteViewController: UIViewController {
 
     @IBAction func newImageButton(_ sender: UIButton) {
         
-       // self.imageView = downlaoded image
+         DownloadManager.downloadImageAtURL(urlString: "https://lorempixel.com/250/500/nature/")
         
-        
+        DispatchQueue.main.async() {
+            
+            self.imageView.image = DownloadManager.theDowloadManager.lastPhoto
+   
+        }
     }
     
     
     @IBAction func newQuoteButton(_ sender: UIButton) {
         
         DownloadManager.downloadJsonAtURL(urlString: "http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json")
-        
-        DispatchQueue.main.async() {
 
-        self.quoteLabel.text = DownloadManager.newQuote.quoteQuote
-        
-        self.authorLabel.text = DownloadManager.newQuote.quoteAuthor
+        DispatchQueue.main.async() {
+            self.currQuote =  DownloadManager.theDowloadManager.lastQuote
             
-       
+          
+            self.quoteLabel.text = self.currQuote.quoteQuote
+            self.authorLabel.text = self.currQuote.quoteAuthor
+            
         }
     }
     
     
     @IBAction func saveButton(_ sender: UIButton) {
-        NewQuoteViewController.quotesArray.append(DownloadManager.newQuote)
+       
+        self.currQuote?.quotePhoto = self.imageView.image
+        NewQuoteViewController.quotesArray.append((self.currQuote))
+        
     }
     
     

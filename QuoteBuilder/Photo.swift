@@ -1,5 +1,5 @@
 //
-//  Quote.swift
+//  Photo.swift
 //  QuoteBuilder
 //
 //  Created by Sanjay Shah on 2017-11-08.
@@ -8,11 +8,8 @@
 
 import UIKit
 
-public class Quote: NSObject {
+class Photo: NSObject {
     
-    var quoteAuthor:String? = ""
-    var quoteQuote: String? = ""
-    
-    var quotePhoto: UIImage?
+    var photo: UIImage?
 
 }

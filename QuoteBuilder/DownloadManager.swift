@@ -9,15 +9,37 @@
 import Foundation
 import UIKit
 
-class DownloadManager {
+public class DownloadManager {
 
     static let theDowloadManager = DownloadManager()
-    static let newQuote = Quote()
-    
+    public var lastQuote = Quote()
+    public var lastPhoto = UIImage()
+
     
     class func downloadJsonAtURL (urlString : String){
-        
         theDowloadManager.dowloadJsonAtURL(url: urlString)
+    }
+    
+    class func downloadImageAtURL (urlString: String){
+        theDowloadManager.downloadImageAtURL(url: urlString)
+    }
+    
+    
+    func downloadImageAtURL(url: String) {
+        
+        let theURL = URL(string: url)
+        let data: Data
+        do {
+            data = try Data.init(contentsOf: theURL!)
+        }
+        catch {
+                print("error downloading image")
+                return
+        }
+        
+        let newPhoto = Photo()
+        newPhoto.photo = UIImage(data:data)
+        self.lastPhoto = newPhoto.photo!
         
     }
     
@@ -27,9 +49,8 @@ class DownloadManager {
       
         let theURL = URL(string: url)
         
-        
         let session =  URLSession(configuration: URLSessionConfiguration.default)
-        
+    
         let dataTask = session.dataTask(with: theURL!, completionHandler: {(data: Data?, response: URLResponse?, error:Error?) -> Void in
             
             guard let data = data else{
@@ -41,8 +62,6 @@ class DownloadManager {
             
             do{
                 jsonObject = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as? Dictionary <String, String>
-                
-                
             }
             catch{
                 print(error.localizedDescription)
@@ -51,24 +70,22 @@ class DownloadManager {
             guard let json = jsonObject else{
                 print("Error with JSON Object")
                 return
-                
             }
             
          //   OperationQueue.main.addOperation {
+            
+            let newQuote = Quote()
                 
-                DownloadManager.newQuote.quoteAuthor = json["quoteAuthor"]!
-                DownloadManager.newQuote.quoteQuote = json["quoteText"]!
+                newQuote.quoteAuthor = json["quoteAuthor"]!
+                newQuote.quoteQuote = json["quoteText"]!
+            
+            self.lastQuote = newQuote
                 
           //  }
-
-            
         })
         
         dataTask.resume()
-      
     }
-
-
 }
 
 
