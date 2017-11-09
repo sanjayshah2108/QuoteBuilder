@@ -61,27 +61,35 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Jrf-F5-FWW" id="Lbd-s2-gAP"/>
-                        <segue destination="2TR-nz-BgF" kind="show" id="fLf-pH-hD8"/>
+                        <segue destination="6Ey-CV-Ikw" kind="show" identifier="toSharingVC" id="iXt-vr-vOc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IAb-h8-1iL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-279.19999999999999" y="114.69265367316342"/>
         </scene>
-        <!--Activity View Controller-->
-        <scene sceneID="BYd-aR-n9v">
+        <!--Sharing View Controller-->
+        <scene sceneID="JAn-xV-Tbd">
             <objects>
-                <viewController id="2TR-nz-BgF" customClass="ActivityViewController" customModule="QuoteBuilder" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tX7-th-3hQ">
+                <viewController id="6Ey-CV-Ikw" customClass="SharingViewController" customModule="QuoteBuilder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4op-Kz-JPh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="gkU-Cb-VGs"/>
+                        <viewLayoutGuide key="safeArea" id="Kl5-qf-I8G"/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Share" id="SEy-BY-v4R">
+                            <connections>
+                                <action selector="share:" destination="6Ey-CV-Ikw" id="6u0-Vy-BWb"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qNg-zS-DKf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UbB-wN-h9r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-618" y="824"/>
+            <point key="canvasLocation" x="-279" y="948"/>
         </scene>
         <!--New Quote View Controller-->
         <scene sceneID="tne-QT-ifu">

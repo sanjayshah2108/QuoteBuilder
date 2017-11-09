@@ -20,9 +20,16 @@ class NewQuoteViewController: UIViewController {
     
     var currQuote: Quote!
     
+    var quoteView: QuoteView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+
+        
+            // set up view in view hierarchy
+        
 
         // Do any additional setup after loading the view.
     }

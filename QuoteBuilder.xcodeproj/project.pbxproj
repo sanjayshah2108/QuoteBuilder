@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		CE08562D1FB39D1A00D64A55 /* HomescreenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE08562C1FB39D1A00D64A55 /* HomescreenTableViewController.swift */; };
-		CE08562F1FB39E8300D64A55 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE08562E1FB39E8300D64A55 /* ActivityViewController.swift */; };
 		CE0856311FB3A04B00D64A55 /* NewQuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0856301FB3A04B00D64A55 /* NewQuoteViewController.swift */; };
 		CE0856331FB3A2AD00D64A55 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0856321FB3A2AD00D64A55 /* DownloadManager.swift */; };
 		CE0856351FB3AEB800D64A55 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0856341FB3AEB800D64A55 /* Quote.swift */; };
 		CE0856371FB3F12400D64A55 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0856361FB3F12400D64A55 /* Photo.swift */; };
+		CE0856391FB3FB0200D64A55 /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0856381FB3FB0200D64A55 /* QuoteView.swift */; };
+		CE08563B1FB3FB2900D64A55 /* QuoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE08563A1FB3FB2900D64A55 /* QuoteView.xib */; };
+		CE08563D1FB40B4B00D64A55 /* SharingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE08563C1FB40B4B00D64A55 /* SharingViewController.swift */; };
 		CE22D9B01FB39AD1008EB2C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE22D9AF1FB39AD1008EB2C9 /* AppDelegate.swift */; };
 		CE22D9B21FB39AD1008EB2C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE22D9B11FB39AD1008EB2C9 /* ViewController.swift */; };
 		CE22D9B51FB39AD1008EB2C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE22D9B31FB39AD1008EB2C9 /* Main.storyboard */; };
@@ -41,11 +43,13 @@
 
 /* Begin PBXFileReference section */
 		CE08562C1FB39D1A00D64A55 /* HomescreenTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomescreenTableViewController.swift; sourceTree = "<group>"; };
-		CE08562E1FB39E8300D64A55 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		CE0856301FB3A04B00D64A55 /* NewQuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewQuoteViewController.swift; sourceTree = "<group>"; };
 		CE0856321FB3A2AD00D64A55 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		CE0856341FB3AEB800D64A55 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		CE0856361FB3F12400D64A55 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		CE0856381FB3FB0200D64A55 /* QuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
+		CE08563A1FB3FB2900D64A55 /* QuoteView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuoteView.xib; sourceTree = "<group>"; };
+		CE08563C1FB40B4B00D64A55 /* SharingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingViewController.swift; sourceTree = "<group>"; };
 		CE22D9AC1FB39AD1008EB2C9 /* QuoteBuilder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuoteBuilder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE22D9AF1FB39AD1008EB2C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE22D9B11FB39AD1008EB2C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,11 +116,13 @@
 				CE22D9AF1FB39AD1008EB2C9 /* AppDelegate.swift */,
 				CE22D9B11FB39AD1008EB2C9 /* ViewController.swift */,
 				CE22D9B31FB39AD1008EB2C9 /* Main.storyboard */,
+				CE08563C1FB40B4B00D64A55 /* SharingViewController.swift */,
 				CE0856301FB3A04B00D64A55 /* NewQuoteViewController.swift */,
+				CE0856381FB3FB0200D64A55 /* QuoteView.swift */,
+				CE08563A1FB3FB2900D64A55 /* QuoteView.xib */,
 				CE0856321FB3A2AD00D64A55 /* DownloadManager.swift */,
 				CE0856361FB3F12400D64A55 /* Photo.swift */,
 				CE0856341FB3AEB800D64A55 /* Quote.swift */,
-				CE08562E1FB39E8300D64A55 /* ActivityViewController.swift */,
 				CE08562C1FB39D1A00D64A55 /* HomescreenTableViewController.swift */,
 				CE22D9B61FB39AD1008EB2C9 /* Assets.xcassets */,
 				CE22D9B81FB39AD1008EB2C9 /* LaunchScreen.storyboard */,
@@ -253,6 +259,7 @@
 				CE22D9BA1FB39AD1008EB2C9 /* LaunchScreen.storyboard in Resources */,
 				CE22D9B71FB39AD1008EB2C9 /* Assets.xcassets in Resources */,
 				CE22D9B51FB39AD1008EB2C9 /* Main.storyboard in Resources */,
+				CE08563B1FB3FB2900D64A55 /* QuoteView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,9 +289,10 @@
 				CE0856331FB3A2AD00D64A55 /* DownloadManager.swift in Sources */,
 				CE0856311FB3A04B00D64A55 /* NewQuoteViewController.swift in Sources */,
 				CE22D9B21FB39AD1008EB2C9 /* ViewController.swift in Sources */,
+				CE08563D1FB40B4B00D64A55 /* SharingViewController.swift in Sources */,
 				CE22D9B01FB39AD1008EB2C9 /* AppDelegate.swift in Sources */,
 				CE0856351FB3AEB800D64A55 /* Quote.swift in Sources */,
-				CE08562F1FB39E8300D64A55 /* ActivityViewController.swift in Sources */,
+				CE0856391FB3FB0200D64A55 /* QuoteView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

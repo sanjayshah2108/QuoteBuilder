@@ -48,6 +48,25 @@ class HomescreenTableViewController: UIViewController, UITableViewDelegate, UITa
         // Dispose of any resources that can be recreated.
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "toSharingVC", sender: indexPath)
+        
+    
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "toSharingVC"){
+            let selectedIndexPath = sender as! NSIndexPath
+            let index = selectedIndexPath.row
+            
+            let svc = segue.destination as! SharingViewController
+            
+            svc.quote = NewQuoteViewController.quotesArray[index]
+            
+            
+        }
+    }
+    
     
     
     
